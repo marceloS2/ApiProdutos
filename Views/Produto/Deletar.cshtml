@@ -1,0 +1,49 @@
+@model shoope.Models.Produto
+
+@{
+    ViewData["Title"] = "Deletar  Produto";
+
+}
+
+<h1 style="color: red;">Dejesa relamente deletar esse contato? Essa operação é irreversivel</h1>
+
+</hr>
+<div>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(x => x.Nome)
+        </dt>
+      
+        <dt class="col-sm-10">
+            @Html.DisplayFor(x => x.Nome)
+        </dt>
+          <dt class="col-sm-2">
+            @Html.DisplayNameFor(x => x.Preco)
+      
+        </dt>
+        <dt class="col-sm-10">
+            @Html.DisplayFor(x => x.Preco)
+        </dt>
+        
+         <dt class="col-sm-2">
+            @Html.DisplayNameFor(x => x.Fabricante)
+        </dt>
+       
+        <dt class="col-sm-10">
+            @Html.DisplayFor(x => x.Fabricante)
+        </dt>
+         <dt class="col-sm-2">
+            @Html.DisplayNameFor(x => x.Categoria)
+        </dt>
+       
+        <dt class="col-sm-10">
+            @Html.DisplayFor(x => x.Categoria)
+        </dt>
+    </dl>
+</div>
+<form asp-action="Deletar">
+    <input type ="submit" value="Deletar" class="btn btn-danger" />
+</form>
+
+<br>
+<a asp-action= "Index" >Voltar</a>
